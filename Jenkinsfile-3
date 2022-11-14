@@ -31,6 +31,16 @@ pipeline {
         sh 'docker push ghcr.io/$IMAGE_NAME:$IMAGE_VERSION'
       }
     }
+    stage('Test') {
+      steps {
+        sh '''
+          node --version
+          git --version
+          curl --version
+        '''
+      }
+    }
+
   }
   post {
     always {
