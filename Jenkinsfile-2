@@ -11,7 +11,7 @@ pipeline {
     }
     stage('build image') {
       steps {
-        sh 'docker build -t darinpope/jenkins-example-ghcr:8.5-204 .'
+        sh 'docker build -t supawatp/jenkins-example-ghcr:8.4-213 .'
       }
     }
     stage('login to GHCR') {
